@@ -15,7 +15,7 @@ ZSH_THEME_GIT_PROMPT_CLEAN=""
 if id -G -n | grep --quiet --word-regexp --regexp=sudo --regexp=admin; then
   ADMIN_INDICATOR='✓'
 else
-  ADMIN_INDICATOR='❌'
+  ADMIN_INDICATOR='✗'
 fi
 
 ROOT_INDICATOR=""

@@ -12,7 +12,7 @@ ZSH_THEME_GIT_PROMPT_SUFFIX="${BACKGROUND} ]"
 ZSH_THEME_GIT_PROMPT_DIRTY=" ${BACKGROUND}[ ${FOREGROUND}*${BACKGROUND} ]"
 ZSH_THEME_GIT_PROMPT_CLEAN=""
 
-if id --groups --name | grep --quiet --word-regexp sudo; then
+if id -G -n | grep --quiet --word-regexp --regexp=sudo --regexp=admin; then
   ADMIN_INDICATOR='✓'
 else
   ADMIN_INDICATOR='❌'
